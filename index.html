@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css import -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- js file import -->
+    <script src="index.js"></script>
+
+    <title>Fifa World Cup</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="./images/fifa-tickets.jpg" width="100%" height="100%" />
+    </header>
+
+    <!-- Ticket 1 -->
+    <div class="sandwich">
+      <img src="./images/category1.png" height="200px" width="200px" />
+
+      <div class="description">
+        <div class="name">Category 1</div>
+        <p>
+          Category 1 seats being the highest priced and located in prime areas
+          within the stadium.
+        </p>
+        <div class="price">Price: 12,000 L.E</div>
+      </div>
+      <button class="cat" onclick="sand1()">Add ticket</button>
+    </div>
+
+    <!-- Ticket 2 -->
+    <div class="sandwich">
+      <img src="./images/category2.png" height="200px" width="200px" />
+
+      <div class="description">
+        <div class="name">Category 2</div>
+        <p>
+          Located primarily in the corners of each stadium. Category 2 tickets
+          balance good views of the action at the 2022 FIFA World Cup with
+          affordability.
+        </p>
+        <div class="price">Price: 11,000 L.E</div>
+      </div>
+      <button class="cat" onclick="sand2()">Add ticket</button>
+    </div>
+
+    <!-- Ticket 3 -->
+    <div class="sandwich">
+      <img src="./images/category3.png" height="200px" width="200px" />
+
+      <div class="description">
+        <div class="name">Category 3</div>
+        <p>
+          Category 3 seats are located behind the goals, and are the most
+          affordable tickets available at the 2022 FIFA World Cup for non-Qatari
+          residents.
+        </p>
+        <div class="price">Price: 8,000 L.E</div>
+      </div>
+      <button class="cat" onclick="sand3()">Add ticket</button>
+    </div>
+
+    <!-- Ticket 4 -->
+    <div class="sandwich">
+      <img src="./images/category4.png" height="200px" width="200px" />
+
+      <div class="description">
+        <div class="name">Category 4</div>
+        <p>Category 4 is reserved exclusively for residents of Qatar.</p>
+        <div class="price">Price: 7,000 L.E</div>
+      </div>
+      <button class="cat" onclick="sand4()">Add ticket</button>
+    </div>
+
+    <div class="cheque-div">
+      <button class="cat" onclick="printCheque()">Print Cheque</button>
+      <button class="cat" onclick="deleteSelection()">Delete selection</button>
+    </div>
+
+    <div id="cheque" class="cheque">
+      <div class="invoice">
+        <div class="invoice-items">
+          <div class="item">Ticket</div>
+          <div class="price">price</div>
+          <div>Qty.</div>
+        </div>
+        <hr />
+        <div class="ordered-sandwiches">
+          <div id="s1" class="sand_">
+            <div class="s-name">Category 1</div>
+            <div class="s-price">12000</div>
+            <div id="sand_1_qty"></div>
+          </div>
+          <div id="s2" class="sand_">
+            <div class="s-name">Category 2</div>
+            <div class="s-price">11000</div>
+            <div id="sand_2_qty"></div>
+          </div>
+          <div id="s3" class="sand_">
+            <div class="s-name">Category 3</div>
+            <div class="s-price">8000</div>
+            <div id="sand_3_qty"></div>
+          </div>
+          <div id="s4" class="sand_">
+            <div class="s-name">Category 4</div>
+            <div class="s-price">7000</div>
+            <div id="sand_4_qty"></div>
+          </div>
+        </div>
+        <hr />
+        <div>
+          Total Amount =
+          <span id="total_amount"></span>
+        </div>
+      </div>
+      <button id="confirm" onclick="confirmHandler()">OK</button>
+    </div>
+  </body>
+</html>
